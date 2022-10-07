@@ -14,6 +14,3 @@ pipeline {
         }
     }
 }
-
-
-# run docker, then run behave
