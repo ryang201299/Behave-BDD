@@ -3,7 +3,7 @@ pipeline {
     stages {
         stage('Building...') {
             when {
-                branch "* main"
+                branch "main-*"
             }
             steps {
                 bat "python account.py"
