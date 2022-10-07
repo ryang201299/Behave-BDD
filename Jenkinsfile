@@ -2,11 +2,9 @@ pipeline {
     agent any
     stages {
         stage('Building...') {
-            when {
-                branch "main-*"
-            }
             steps {
-                bat "python account.py"
+                bat "docker build dock_practice:0.0.1 ."
+                bat "docker run dock_practice:0.0.1"
             }
         }
         stage('Testing...') {
@@ -16,3 +14,6 @@ pipeline {
         }
     }
 }
+
+
+# run docker, then run behave
